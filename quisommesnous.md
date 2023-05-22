@@ -1,6 +1,7 @@
 ---
 layout: page
 title: quisommesnous
+permalink: /associationdiae/quisommesnous.html
 description: An optional about page for Scriptor Jekyll theme
 feature_image: 
 ---
