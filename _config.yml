@@ -29,26 +29,26 @@ google_analytics: ""
 # Site navigation - each item must have a title and a url.
 navigation:
   - text: Accueil
-    url: /
+    url: /associationdiae/
 
 
    
 
   - text: Qui somme-nous
-    url: /about/
+    url: /associationdiae/about/
     submenuone : Qui somme-nous
     submenutwo : Mot du présidente
     submenuthre : Bureau Diae
-    submenuoneurl : /quisommesnous/
-    submenutwourl : /motdeprésidente/
-    submenuthreurl : /about/
+    submenuoneurl : /associationdiae/quisommesnous/
+    submenutwourl : /associationdiae/motdeprésidente/
+    submenuthreurl : /associationdiae/about/
     submenu : 
       - text: test1
         url : /test/
   - text: Evenements
-    url: /evenements/
+    url: /associationdiae/evenements/
   - text: Contact
-    url: /contact/    
+    url: /associationdiae/contact/    
 
 
 # The shortname for your Disqus site to enable comments.
