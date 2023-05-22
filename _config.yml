@@ -35,20 +35,20 @@ navigation:
    
 
   - text: Qui somme-nous
-    url: /associationdiae/about/
+    url: /about.html
     submenuone : Qui somme-nous
     submenutwo : Mot du présidente
     submenuthre : Bureau Diae
-    submenuoneurl : /quisommesnous/
-    submenutwourl : /motdeprésidente/
-    submenuthreurl : /about/
+    submenuoneurl : /quisommesnous.html
+    submenutwourl : /motdeprésidente.html
+    submenuthreurl : /about.html
     submenu : 
       - text: test1
         url : /test/
   - text: Evenements
-    url: /evenements/
+    url: /evenements.html
   - text: Contact
-    url: /associationdiae/contact/    
+    url: contact.html
 
 
 # The shortname for your Disqus site to enable comments.
