@@ -46,7 +46,7 @@ navigation:
       - text: test1
         url : /test/
   - text: Evenements
-    url: /associationdiae/evenements/
+    url: /evenements/
   - text: Contact
     url: /associationdiae/contact/    
 
