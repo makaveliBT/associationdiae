@@ -45,7 +45,7 @@ navigation:
     submenu : 
       - text: test1
         url : /test/
-  - text: Evenements
+  - text: Evénements
     url: /associationdiae/evenements.html
   - text: Contact
     url: /associationdiae/contact.html
