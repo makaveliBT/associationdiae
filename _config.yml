@@ -39,9 +39,9 @@ navigation:
     submenuone : Qui somme-nous
     submenutwo : Mot du présidente
     submenuthre : Bureau Diae
-    submenuoneurl : /associationdiae/quisommesnous/
-    submenutwourl : /associationdiae/motdeprésidente/
-    submenuthreurl : /associationdiae/about/
+    submenuoneurl : /quisommesnous/
+    submenutwourl : /motdeprésidente/
+    submenuthreurl : /about/
     submenu : 
       - text: test1
         url : /test/
