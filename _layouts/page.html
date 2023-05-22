@@ -1,19 +1,224 @@
 ---
 layout: default
 ---
-
+ {% if page.title == "about" %}
+<img src="/images/OrganigrammeDiae.png" width="6000px" height="6000px" alt="" >
+     {% endif %}
+    <div class="post-content bottom">
 <main class="main-content fadeInDown delay_075s">
+  
   <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">{{page.title}}</h1>
+    
+      <!--<h1 class="post-title">{{page.title}}</h1>-->
       {% if page.feature_image and page.feature_image != "" %}
-      <figure class="post-thumbnail image-card width-wide">
-        <img src="{{ page.feature_image | relative_url }}" alt="{{ page.title }}">
-      </figure><!-- .post-thumbnail -->
+      
+      
+    
       {% endif %}
-    </header><!-- .post-header -->
-    <div class="post-content">
+
+  
+      {% if page.title == "motdeprésidente" %}
+      <div style="text-align: left;"><img src="/images/pres.jpg" width="200px" alt="My Image" /></div>
+      {% endif %}
       {{content}}
+       {% if page.title == "evenements" %}
+       <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-7c3ce274-8026-4ab5-8ca2-58ebc8a1ec51"></div>
+    
+
+
+      {% endif %}
+      {% if page.title == "contact" %}
+<div class="formbold-main-wrapper">
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="formbold-form-wrapper">
+    <form action="https://formbold.com/s/FORM_ID" method="POST">
+        <div class="formbold-input-flex">
+          <div>
+              <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder="prénom"
+              class="formbold-form-input"
+              />
+              <label for="firstname" class="formbold-form-label"> Prénom</label>
+          </div>
+          <div>
+              <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              placeholder="nom"
+              class="formbold-form-input"
+              />
+              <label for="lastname" class="formbold-form-label"> Nom</label>
+          </div>
+        </div>
+
+        <div class="formbold-input-flex">
+          <div>
+              <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="said@mail.com"
+              class="formbold-form-input"
+              />
+              <label for="email" class="formbold-form-label"> Mail </label>
+          </div>
+          <div>
+              <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="(212) 7 62 96 17 23"
+              class="formbold-form-input"
+              />
+              <label for="phone" class="formbold-form-label"> Tel</label>
+          </div>
+        </div>
+
+        <div class="formbold-textarea">
+            <textarea
+                rows="6"
+                name="message"
+                id="message"
+                placeholder="Write your message..."
+                class="formbold-form-input"
+            ></textarea>
+            <label for="message" class="formbold-form-label"> Message </label>
+        </div>
+
+
+
+        <button class="formbold-btn">
+            Send Message
+        </button>
+    </form>
+  </div>
+</div>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+  }
+
+  .formbold-input-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 22px;
+  }
+  .formbold-input-flex > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .formbold-textarea {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .formbold-form-input {
+    width: 100%;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #DDE3EC;
+    background: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074D;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input::placeholder {
+    color: #536387;
+  }
+  .formbold-form-input:focus {
+    border-color: #6A64F1;
+  }
+  .formbold-form-label {
+    color: #07074D;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 18px;
+  }
+  .formbold-form-input:focus + .formbold-form-label {
+    color: #6A64F1;
+  }
+
+  .formbold-input-file {
+    margin-top: 30px;
+  }
+  .formbold-input-file input[type="file"] {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    z-index: -1;
+  }
+  .formbold-input-file .formbold-input-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+
+  .formbold-filename-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 22px;
+  }
+  .formbold-filename {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 24px;
+    color: #536387;
+  }
+  .formbold-filename svg {
+    cursor: pointer;
+  }
+
+  .formbold-btn {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 12px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #6A64F1;
+    color: white;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+</style>
+      {% endif %}
     </div><!-- .post-content -->
   </article><!-- .post -->
 </main><!-- .site-main -->

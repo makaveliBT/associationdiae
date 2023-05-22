@@ -14,16 +14,117 @@
   <!-- Styles -->
   <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+  <style type='text/css'>
+      ul.the_one {
+        display: none;
+      }
+      
+
+      li.one_one:hover ul.the_one {
+        display: block;
+
+      }
+      #myimage {
+    width: 400px;
+    height: 300px;
+}
+   html,body,#wrapper {
+        height:100%;
+        margin:0;
+        padding:0;
+    }
+    #wrapper {
+        position:relative;
+          border-style: solid;
+  border-left-width: 15px;
+    }
+
+    #top, #middle, #bottom {
+        position:absolute;
+    }
+
+    #top {
+        height:50px;
+        width:100%;
+        background:grey;
+    }
+    #middle {
+        top:50px;
+        bottom:50px;
+        width:100%;
+        background:black;
+    }
+    #bottom {
+
+  text-align: justify;
+  text-justify: inter-word;
+
+    }
+    .child {
+  width: 50px;
+  height: 50px;
+ 
+  /* Center horizontally*/
+  margin: 0 auto;
+}
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+body {
+  background-image: url('/images/back.jpg');
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  margin-left: 10%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+  </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+{% if page.url == "/" or page.title == "about" %}
   <div id="page" class="site">
     <div class="inner">
       {% include header.html %}
+
+    </div><!-
+     </div><!-- .site -->
+       <div  style="width:auto;height:100vh;">
       {{content}}
+</div>
+ <div id="page" class="site">
+       <div class="inner">
       {% include footer.html %}
     </div><!-- .inner -->
   </div><!-- .site -->
+{% else %}
+<div id="page" class="site">
+    <div class="inner">
+      {% include header.html %}
+       {{content}}
+       {% include footer.html %}
+
+      </div>
+      </div>
+      {% endif %}
+
 
   <!-- Scripts -->
   {% if site.google_analytics %}

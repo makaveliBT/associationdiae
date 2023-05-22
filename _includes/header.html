@@ -1,11 +1,15 @@
-<header class="site-header">
+
+<header class="site-header" >
   {% if page.url == "/" %}
-  <h1 class="site-title"><a class="logo-text" href="{{ site.baseurl }}/">{{site.title}}</a></h1>
+  <h1 class="site-title"><a class="logo-text" style="font-size:18px;" href="{{ site.baseurl }}/">{{site.title}}</a></h1>
   {% else %}
-  <p class="site-title"><a class="logo-text" href="{{ site.baseurl }}/">{{site.title}}</a></p>
+  <p class="site-title"><a class="logo-text"style="font-size:18px;" href="{{ site.baseurl }}/">{{site.title}}</a></p>
   {% endif %}
+
+  <div style = "position:relative; left:-235px; top:-2px;"><img src="/images/favicon.png" alt="" ></div>
   <nav class="site-navigation">
-    <div class="site-navigation-wrap">
+    
+    <div class="site-navigation-wrap" style= "background-color: rgba(204, 0, 204, 0.75);" >
       <h2 class="screen-reader-text">Main navigation</h2>
       <ul class="menu">
         {% for item in site.navigation %}
@@ -13,9 +17,17 @@
         {% if page.url == item.url %}
         {% assign current = 'nav-current' %}
         {% endif %}
-        <li class="menu-item {{ current }}">
-          <a class="{{ current }}" href="{{ item.url }}">{{ item.text }}</a>
+        <li class="menu-item {{ current }} one_one">
+          <a class="{{ current }}" style="font-size:16px; color:black;" href="{{ item.url }}">{{ item.text }}</a>
+          {% if item.text == "Qui somme-nous" %}
+           <ul class="the_one">
+              <li class="{{ current }}" ><a class="{{ current }}"  style="font-size:13px; color:black;" href="{{ item.submenuoneurl }}">{{ item.submenuone }}</a></li>
+              <li class="{{ current }}" ><a class="{{ current }}" style="font-size:13px;color:black;" href="{{ item.submenutwourl }}">{{ item.submenutwo }}</a></li>
+              <li class="{{ current }}" ><a class="{{ current }}" style="font-size:13px;color:black;" href="{{ item.submenuthreurl }}">{{ item.submenuthre }}</a></li>
+          </ul>
+          {% endif %}
         </li>
+
         {% endfor %}
       </ul><!-- .menu -->
       <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
@@ -25,8 +37,3 @@
   <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
 </header>
 
-{% if site.description and site.description != "" and page.url == "/" %}
-<div class="site-description fadeInDown delay_05s">
-  <p>{{ site.description }}</p>
-</div><!-- .site-description -->
-{% endif %}

@@ -2,50 +2,41 @@
 layout: default
 ---
 
-<main class="main-content fadeInDown delay_075s">
+
 
   {% for post in paginator.posts %}
-  <article class="post">
-    <header class="post-header">
-      <time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{post.date | date: "%B %-d, %Y" }}</time>
-      <h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a></h2>
-      <div class="post-meta">
-        By <span class="post-author">{{ site.data.author.name }}</span>{% if post.tags.size > 0 %}<span
-          class="post-tags"> in
-          {% for tag in post.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
-      </div><!-- .post-meta -->
+  
+         <div class="child" href="/test" style = "position:relative; left:-100px; top:auto; ">
+<button type="button" onclick="window.location.href='http://127.0.0.1:4000/test';"  class="btn btn-danger" style="width:200px ; background-color: rgba(204, 0, 204, 0.75);">inscription</button>
+      </div>
+    
+
       {% if post.feature_image and post.feature_image != "" %}
-      <figure class="post-thumbnail image-card width-wide">
-        <a href="{{site.baseurl}}{{post.url}}"><img src="{{ post.feature_image | relative_url }}"
-            alt="{{ post.title }}"></a>
-      </figure><!-- .post-thumbnail -->
+ <div style =  "margin-left: 20%;">
+<p>L’une des missions centrales de l’association Diae par la recherche et la prévention sur le cancer est la promotion de la prise en charge du cancer tout en répondant aux besoins spécifiques de la région Tanger, Tanger-Tétouan-Al Hoceïma.</p> 
+
+<p>Dans ce sens, nous organisons un master class international en présence d’imminents experts, pour optimiser le traitement des sarcomes et répondre aux exigences internationales dans la prise en charge de cette pathologie rare. </p>
+</div>
+    <div class="row">
+  <div class="column">
+    <img src="/images/1.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/images/2.jpg" alt="Forest" style="width:100%">
+  </div>
+ 
+</div>
+        <img style="width:100%;height:80%;" src="{{ post.feature_image | relative_url }}"
+            alt="{{ post.title }}">
+     
       {% endif %}
-    </header><!-- .post-header -->
-    <div class="post-content">
-      {% if post.content contains '<!--more-->' %}
-      {{ post.content | split:'<!--more-->' | first }}
-      <p class="read-more"><a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link">Continue reading &rarr;</a>
-      </p>
-      {% else %}
-      {{ post.content }}
-      {% endif %}
-    </div><!-- .post-content -->
-  </article><!-- .post -->
+   
+    <<!-- .post -->
   {% endfor %}
 
-  {% if paginator.total_pages > 1 %}
-  <nav class="pagination">
-    <h2 class="screen-reader-text">Posts navigation</h2>
-    <div class="nav-links">
-      {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}" class="newer-posts">&larr; Newer Posts</a>
-      {% endif %}
-      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-      {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}" class="older-posts">Older Posts &rarr;</a>
-      {% endif %}
-    </div>
-  </nav><!-- .pagination -->
-  {% endif %}
+ 
 
-</main><!-- .site-main -->
+ <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-7c3ce274-8026-4ab5-8ca2-58ebc8a1ec51"></div>-->
+
+<!-- .site-main -->

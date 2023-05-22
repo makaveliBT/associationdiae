@@ -5,27 +5,38 @@ layout: default
 <main class="main-content fadeInDown delay_075s">
 
   <article class="post">
-    
+    <header class="post-header">
+      <time class="post-date" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{page.date | date: "%B %-d, %Y" }}</time>
+      <h1 class="post-title">{{page.title}}</h1>
+      <!--<div class="post-meta">
+        By <span class="post-author">{{ site.data.author.name }}</span>{% if page.tags.size > 0 %}<span class="post-tags"> in {% for tag in page.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
+      </div><!-- .post-meta -->
+      {% if page.feature_image and page.feature_image != "" %}
+      <figure class="post-thumbnail image-card width-wide">
+        <img src="{{ page.feature_image | relative_url }}" alt="{{ page.title }}">
+      </figure><!-- .post-thumbnail -->
+      {% endif %}
+    </header><!-- .post-header -->
     <div class="post-content">
       {{content}}
     </div><!-- .post-content -->
     <div class="post-share">
-         
-    <form class="well form-horizontal " action="https://api.staticforms.xyz/submit"  method="post"  id="contact_form">
+          <div class="container">
+
+    <form class="well form-horizontal" action=" " style = "position:relative; left:-190px; top:2px; " method="post"  id="contact_form">
 <fieldset>
 
 <!-- Form Name -->
-<legend><center><h2><b>Forumulaire d'inscription</b></h2></center></legend><br>
+<legend><center><h2><b>Registration Form</b></h2></center></legend><br>
 
 <!-- Text input-->
-<input type="hidden" name="accessKey" value="32c2107b-3bac-4439-b72c-462d78a083de">
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Nom</label>  
+  <label class="col-md-4 control-label">First Name</label>  
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="$first_name" placeholder="nom" class="form-control"  type="text">
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -33,50 +44,71 @@ layout: default
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label" >Prénom</label> 
+  <label class="col-md-4 control-label" >Last Name</label> 
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="$last_name" placeholder="prénom" class="form-control"  type="text">
+  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
   <div class="form-group"> 
-  <label class="col-md-4 control-label">Fonction</label>
+  <label class="col-md-4 control-label">Department / Office</label>
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="$department" class="form-control selectpicker">
-      <option value="">Selectionner votre fonction</option>
-      <option>Médcin résident</option>
-      <option>Médcin spécialiste</option>
-      <option >Professeur</option>
-   
+    <select name="department" class="form-control selectpicker">
+      <option value="">Select your Department/Office</option>
+      <option>Department of Engineering</option>
+      <option>Department of Agriculture</option>
+      <option >Accounting Office</option>
+      <option >Tresurer's Office</option>
+      <option >MPDC</option>
+      <option >MCTC</option>
+      <option >MCR</option>
+      <option >Mayor's Office</option>
+      <option >Tourism Office</option>
     </select>
   </div>
 </div>
 </div>
-  <div class="form-group"> 
-  <label class="col-md-4 control-label">Structure</label>
-    <div class="col-md-4 selectContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="$department" class="form-control selectpicker">
-      <option value="">Selectionner votre structure</option>
-      <option>Cabinet Privé</option>
-      <option>Hopital public</option>
-      <option >CHU</option>
-    
-    </select>
-  </div>
-</div>
-</div>
-
   
+<!-- Text input-->
 
+<div class="form-group">
+  <label class="col-md-4 control-label">Username</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="user_name" placeholder="Username" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
 
+<!-- Text input-->
 
+<div class="form-group">
+  <label class="col-md-4 control-label" >Password</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="user_password" placeholder="Password" class="form-control"  type="password">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Confirm Password</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="confirm_password" placeholder="Confirm Password" class="form-control"  type="password">
+    </div>
+  </div>
+</div>
 
 <!-- Text input-->
        <div class="form-group">
@@ -93,30 +125,19 @@ layout: default
 <!-- Text input-->
        
 <div class="form-group">
-  <label class="col-md-4 control-label">Téléphone</label>  
+  <label class="col-md-4 control-label">Contact No.</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="$contact_no" placeholder="" class="form-control" type="text">
-    </div>
-  </div>
-</div>
-
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">ville</label>  
-  <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="$user_name" placeholder="ville" class="form-control"  type="text">
+  <input name="contact_no" placeholder="(639)" class="form-control" type="text">
     </div>
   </div>
 </div>
 
 <!-- Select Basic -->
 
-<input type="hidden" name="redirectTo" value="http://127.0.0.1:4000/">
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
 
 <!-- Button -->
 <div class="form-group">

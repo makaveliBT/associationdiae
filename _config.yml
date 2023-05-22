@@ -9,10 +9,10 @@
 lang: en-US
 
 # Site title
-title: "Scriptor"
+title: "ASSOCIATION DIAE"
 
 # A description of your site for meta tag, search engine results.
-description: "Scriptor is a minimal, clean, modern & responsive Jekyll theme for writers"
+description: 
 
 # The subpath of your site, e.g. /blog, for generating urls.
 baseurl: ""
@@ -21,33 +21,45 @@ baseurl: ""
 url: "https://scriptor-jekyll.netlify.com"
 
 # Favicon
-favicon: images/favicon.png
+favicon: images/favicon-32x32.png
 
 # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 google_analytics: ""
 
 # Site navigation - each item must have a title and a url.
 navigation:
-  - text: Home
+  - text: Accueil
     url: /
-  - text: About
+
+
+   
+
+  - text: Qui somme-nous
     url: /about/
-  - text: Style Guide
-    url: /style-guide/
-  - text: Tags
-    url: /tags/
-  - text: Download
-    url: https://github.com/JustGoodThemes/Scriptor-Jekyll-Theme
+    submenuone : Qui somme-nous
+    submenutwo : Mot du présidente
+    submenuthre : Bureau Diae
+    submenuoneurl : /quisommesnous/
+    submenutwourl : /motdeprésidente/
+    submenuthreurl : /about/
+    submenu : 
+      - text: test1
+        url : /test/
+  - text: Evenements
+    url: /evenements/
+  - text: Contact
+    url: /contact/    
+
 
 # The shortname for your Disqus site to enable comments.
 disqus: justgoodthemes
 
 # Colors
-accent_color: '#2d72d9'
+accent_color: '#ce2dd9'
 
 # Site footer
 footer:
-  content: "&copy; Scriptor all rights reserved. Theme by [JustGoodThemes](https://www.justgoodthemes.com)."
+  content: "&copy; Association DIAE all rights reserved. "
   has_social: true
 
 # Plugins
