@@ -34,9 +34,9 @@ navigation:
 
    
 
-  - text: Qui sommes-nous
+  - text: Qui somme-nous
     url: /about.html
-    submenuone : Qui sommes-nous
+    submenuone : Qui somme-nous
     submenutwo : Mot du présidente
     submenuthre : Bureau Diae
     submenuoneurl : /associationdiae/associationdiae/quisommesnous.html
